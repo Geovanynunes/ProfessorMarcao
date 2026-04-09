@@ -13,6 +13,7 @@ pageEncoding="UTF-8"%>
 <head>
 
 <title>Carrinho de Compras</title>
+<link rel="stylesheet" href="style.css">
 
 </head>
 

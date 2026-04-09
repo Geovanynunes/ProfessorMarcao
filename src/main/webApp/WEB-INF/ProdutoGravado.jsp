@@ -11,6 +11,7 @@ pageEncoding="UTF-8"%>
 <head>
 
     <title>Cadastro de Produtos</title>
+    <link rel="stylesheet" href="style.css">
 
 </head>
 

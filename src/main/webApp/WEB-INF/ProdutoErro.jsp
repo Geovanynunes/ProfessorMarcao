@@ -9,6 +9,7 @@ pageEncoding="UTF-8"%>
 <head>
 
     <title>Dados Inválidos</title>
+    <link rel="stylesheet" href="style.css">
 
 </head>
 

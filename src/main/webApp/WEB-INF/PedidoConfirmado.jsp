@@ -13,6 +13,7 @@ pageEncoding="UTF-8"%>
 <head>
 
 <title>Pedido</title>
+<link rel="stylesheet" href="style.css">
 
 </head>
 
