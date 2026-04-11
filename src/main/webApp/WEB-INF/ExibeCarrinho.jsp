@@ -19,11 +19,15 @@ pageEncoding="UTF-8"%>
 
 <body>
 
+<jsp:include page="Cabecalho.jsp" />
+
+<div class="page-wrapper">
+
 <form action="FechaPedidoServlet" method="post">
 
 <table border="1">
 
-<tr> <th>Código</th> <th>Descrição do Produto</th> <th>Preço</th>
+<tr> <th>Código</th> <th>Imagem</th> <th>Descrição do Produto</th> <th>Preço</th>
 
 <th>Quantidade</th> </tr>
 <c:forEach items="${carrinho}" var="entrada">
@@ -32,9 +36,9 @@ pageEncoding="UTF-8"%>
 
 <tr>
 
-<td><input type="text" name="id" readonly size=5
+<td>${produto.id}<input type="hidden" name="id" value="${produto.id}"></td>
 
-value="${produto.id}"></td>
+<td><img src="data:image/png;base64,${produto.fotoAsString}" style="max-width: 100px; max-height: 100px;"></td>
 
 <td>${produto.descricao}</td>
 
@@ -54,7 +58,7 @@ href="RemoveItemServlet?id=${produto.id}">Remover</a></td>
 
 </c:forEach>
 
-<tr> <td colspan="4" align="center"><input type="submit"
+<tr> <td colspan="6" align="center"><input type="submit"
 
 value="Fechar Pedido"></td> </tr>
 
@@ -63,6 +67,10 @@ value="Fechar Pedido"></td> </tr>
 </form>
 
 <p><a href="CatalogoServlet">Continuar Comprando</a>
+
+</div>
+
+<jsp:include page="Rodape.jsp" />
 
 </body>
 
