@@ -22,7 +22,7 @@ rTimezone=America/Sao_Paulo" />
 
             <property name="jakarta.persistence.jdbc.password"
 
-                      value="geovany7007" />
+                      value="Gfh17060618," />
 
             <property name="jakarta.persistence.jdbc.driver"
 

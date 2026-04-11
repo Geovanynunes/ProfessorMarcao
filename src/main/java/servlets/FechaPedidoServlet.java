@@ -32,7 +32,7 @@ public class FechaPedidoServlet extends HttpServlet {
 
         Cliente cliente = (Cliente) sessao.getAttribute("cliente");
 
-        if (ids == null || cliente == null) {
+        if (ids == null || cliente == null || cliente.getNome() == null) {
 
             if (ids == null) {
 
@@ -110,7 +110,7 @@ public class FechaPedidoServlet extends HttpServlet {
 
             }
 
-            sessao.invalidate();
+            sessao.removeAttribute("carrinho");
 
             request.setAttribute("pedido", pedido);
 

@@ -19,6 +19,9 @@ pageEncoding="UTF-8"%>
 
 <body>
 
+<jsp:include page="Cabecalho.jsp" />
+<div class="page-wrapper" style="padding-top: 0;">
+
 <h1>Pedido Confirmado</h1>
 
 <p>Data: <fmt:formatDate value="${pedido.emissao}"
@@ -67,42 +70,18 @@ value="${item.precoVenda * item.quantidade}"
 type="currency" groupingUsed="true"/></td>
 
 </tr>
-<p>Produtos:
-
-<table border="1">
-
-<tr>
-
-<th>Descrição</th> <th>Preço Unit.</th> <th>Quantidade</th>
-
-<th>Total Item</th>
-
+<c:set var="total" value="${total + (item.precoVenda * item.quantidade)}"/>
 </tr>
-
-<c:set var="total" value="0"/>
-
-<c:forEach var="item" items="${pedido.itens}">
-
+</c:forEach>
 <tr>
-
-<td>${item.produto.descricao}</td>
-
-<td align="right"><fmt:formatNumber
-
-value="${item.precoVenda}" type="currency"
-
-groupingUsed="true"/></td>
-
-<td align="right"><fmt:formatNumber
-
-value="${item.quantidade}" type="number"
-
-groupingUsed="true"/></td>
-
-<td align="right"><fmt:formatNumber
-
-value="${item.precoVenda * item.quantidade}"
-
-type="currency" groupingUsed="true"/></td>
-
+    <td colspan="3" align="right"><b>Total do Pedido:</b></td>
+    <td align="right"><b><fmt:formatNumber value="${total}" type="currency" groupingUsed="true"/></b></td>
 </tr>
+</table>
+<p><a href="index.jsp" class="link-btn">Voltar à Página Inicial</a></p>
+
+</div>
+<jsp:include page="Rodape.jsp" />
+
+</body>
+</html>

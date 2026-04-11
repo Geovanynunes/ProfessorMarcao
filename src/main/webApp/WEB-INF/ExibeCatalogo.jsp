@@ -19,6 +19,9 @@ pageEncoding="UTF-8"%>
 
 <body>
 
+<jsp:include page="Cabecalho.jsp" />
+<div class="page-wrapper" style="padding-top: 0;">
+
 <table border="1">
 
     <tr>
@@ -52,7 +55,10 @@ pageEncoding="UTF-8"%>
 
 </table>
 
-<p><a href="CarrinhoServlet">Mostrar Carrinho</a>
+<p><a href="CarrinhoServlet" class="link-btn">Mostrar Carrinho</a>
+
+</div>
+<jsp:include page="Rodape.jsp" />
 
 </body>
 
