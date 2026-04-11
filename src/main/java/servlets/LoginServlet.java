@@ -55,13 +55,13 @@ public class LoginServlet extends HttpServlet {
 
             } else {
 
-                response.sendRedirect("FormLogin.html");
+                response.sendRedirect("FormLogin.jsp");
 
             }
 
         } else {
 
-            response.sendRedirect("FormLogin.html");
+            response.sendRedirect("FormLogin.jsp");
 
         }
 

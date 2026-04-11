@@ -40,7 +40,7 @@ public class FechaPedidoServlet extends HttpServlet {
 
             } else {
 
-                response.sendRedirect("FormLogin.html");
+                response.sendRedirect("FormLogin.jsp");
 
             }
 

@@ -13,8 +13,8 @@
                 <a href="LogoutServlet" style="margin-left: 8px;">Sair</a>
             </c:when>
             <c:otherwise>
-                <a href="FormLogin.html">Login</a> |
-                <a href="FormCliente.html" style="margin-left: 8px;">Criar Conta</a>
+                 <a href="FormLogin.jsp">Login</a> |
+                 <a href="FormCliente.jsp" style="margin-left: 8px;">Criar Conta</a>
             </c:otherwise>
         </c:choose>
     </div>

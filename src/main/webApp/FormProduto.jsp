@@ -1,3 +1,12 @@
+al<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="modelo.entities.Cliente" %>
+<%
+Cliente cliente = (Cliente) session.getAttribute("cliente");
+if (cliente == null) {
+    response.sendRedirect("FormLogin.jsp");
+    return;
+}
+%>
 <!DOCTYPE html>
 
 <html>
@@ -11,6 +20,10 @@
 </head>
 
 <body>
+
+<jsp:include page="WEB-INF/Cabecalho.jsp" />
+
+<div class="page-wrapper">
 
 <h1>Cadastro de Produtos</h1>
 
@@ -34,6 +47,10 @@
   <p> <input type="submit" value="Cadastrar">
 
 </form>
+
+</div>
+
+<jsp:include page="WEB-INF/Rodape.jsp" />
 
 </body>
 

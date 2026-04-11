@@ -15,7 +15,7 @@
         
         <div class="nav-index">
             <a href="CatalogoServlet">Ver Catálogo de Produtos</a>
-            <a href="FormProduto.html">Cadastro de Produtos (Admin)</a>
+            <a href="FormProduto.jsp">Cadastro de Produtos (Admin)</a>
         </div>
     </div>
 

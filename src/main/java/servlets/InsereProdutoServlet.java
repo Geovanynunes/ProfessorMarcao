@@ -12,6 +12,7 @@ import jakarta.servlet.http.*;
 
 import modelo.dao.ProdutoDAO;
 
+import modelo.entities.Cliente;
 import modelo.entities.Produto;
 
 @WebServlet("/InsereProdutoServlet")
@@ -24,6 +25,13 @@ public class InsereProdutoServlet extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response)
 
             throws ServletException, IOException {
+
+        Cliente cliente = (Cliente) request.getSession().getAttribute("cliente");
+
+        if (cliente == null) {
+            response.sendRedirect("FormLogin.jsp");
+            return;
+        }
 
         String descricao = request.getParameter("descProd");
 

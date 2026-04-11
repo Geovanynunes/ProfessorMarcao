@@ -30,7 +30,7 @@ public class InsereClienteServlet extends HttpServlet {
 
             if (existente != null) {
                 // Email já em uso — volta pro formulário
-                response.sendRedirect("FormCliente.html");
+                response.sendRedirect("FormCliente.jsp");
                 return;
             }
 
@@ -42,11 +42,11 @@ public class InsereClienteServlet extends HttpServlet {
             dao.salvar(cliente);
 
             // Cadastro OK — vai para o login
-            response.sendRedirect("FormLogin.html");
+            response.sendRedirect("FormLogin.jsp");
 
         } else {
             // Algum campo veio nulo — volta pro formulário
-            response.sendRedirect("FormCliente.html");
+            response.sendRedirect("FormCliente.jsp");
         }
     }
 }

@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -6,6 +7,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<jsp:include page="WEB-INF/Cabecalho.jsp" />
+
+<div class="page-wrapper">
 
 <h1>Registre-se</h1>
 
@@ -24,9 +29,13 @@
            autocomplete="new-password" minlength="8" required>
 
     <p><input type="submit" value="Criar conta"></p>
-    <p>Já tem conta? <a href="FormLogin.html">Fazer login</a></p>
+    <p>Já tem conta? <a href="FormLogin.jsp">Fazer login</a></p>
 
 </form>
+
+</div>
+
+<jsp:include page="WEB-INF/Rodape.jsp" />
 
 </body>
 </html>
